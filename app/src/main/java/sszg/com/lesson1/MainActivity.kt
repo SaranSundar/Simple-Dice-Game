@@ -82,7 +82,7 @@ class MainActivity : AppCompatActivity() {
              */
             MaterialDialog.Builder(this)
                     .title("You rolled a...")
-                    .content("" + (frameNumber.plus(1)))
+                    .content("${(frameNumber.plus(1))}")
                     .positiveText("Ok")
                     .show()
         }
