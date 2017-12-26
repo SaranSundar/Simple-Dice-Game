@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity() {
          * Having an extension function for toast is useful for future. Not crucial though, I didn't
          * have to do this.
          */
-        "Rolling Dice!".toToast().show()
+        "Rolling Dice!".makeToast().show()
         /**
          * I have a little nitpick of making a class in a function, especially if you aren't using
          * one of the functions in the class. Idk, I didn't have to do this either really.
@@ -93,8 +93,9 @@ class MainActivity : AppCompatActivity() {
      * Modified because .toToast().show() seems more logical than .show()
      * Modified because of wanting to perhaps have manipulation of length. Demonstrated default
      * parameters in Kotlin.
+     * Modified because it makes sense to do makeToast since Toast has a makeText
      */
-    private fun String.toToast(length: Int = Toast.LENGTH_SHORT): Toast {
+    private fun String.makeToast(length: Int = Toast.LENGTH_SHORT): Toast {
         return Toast.makeText(this@MainActivity, this, length)
     }
 
