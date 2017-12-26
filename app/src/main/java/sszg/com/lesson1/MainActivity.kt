@@ -1,9 +1,5 @@
 package sszg.com.lesson1
 
-/**
- * In order to do this, you needed to apply the following plugin to your gradle:
- *      apply plugin: 'kotlin-android-extensions'
- */
 import android.graphics.drawable.AnimationDrawable
 import android.os.Bundle
 import android.os.CountDownTimer
@@ -11,6 +7,10 @@ import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.Toast
 import com.afollestad.materialdialogs.MaterialDialog
+/**
+ * In order to do this, you needed to apply the following plugin to your gradle:
+ *      apply plugin: 'kotlin-android-extensions'
+ */
 import kotlinx.android.synthetic.main.activity_main.*
 import java.security.SecureRandom
 
