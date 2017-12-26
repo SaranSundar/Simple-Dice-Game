@@ -68,6 +68,18 @@ class MainActivity : AppCompatActivity() {
                 (0 until animation.numberOfFrames)
                         .filter { animation.getFrame(it) == currentFrame }[0]
             }
+            /** Here's an alternate solution (unsure if this will work):
+            val frameNumber2: Int = let {
+                val currentFrame = animation.current
+                (0 until animation.numberOfFrames)
+                        .filter { currentFrame == animation.getFrame(it) }
+                        .forEach { return@let it }
+                -1
+            }*/
+            /**
+             * ^ essentially, the return@let allows us to return the appropriate frame index, and if
+             * nothing is found, it would return -1.
+             */
             MaterialDialog.Builder(this)
                     .title("You rolled a...")
                     .content("" + (frameNumber.plus(1)))
