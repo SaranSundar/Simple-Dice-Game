@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
      * I don't know which way is better, but I prefer the way of putting in the XML the onClick
      * function and making all the buttons have separate functions. Just me? Maybe.
      */
-    fun roleDice(view: View) {
+    fun rollDice(view: View) {
         /**
          * Don't need all the other ids since they're all in the XML. (:
          */
