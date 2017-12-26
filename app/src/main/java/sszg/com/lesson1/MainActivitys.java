@@ -15,7 +15,7 @@ import com.afollestad.materialdialogs.MaterialDialog;
 
 import java.util.Random;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivitys extends AppCompatActivity {
 
     private Button diceRollButton;
     private ImageView diceImageView;
@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
                                 break;
                             }
                         }
-                        new MaterialDialog.Builder(MainActivity.this)
+                        new MaterialDialog.Builder(MainActivitys.this)
                                 .title("You rolled a...")
                                 .content("" + (frameNumber + 1))
                                 .positiveText("Ok")

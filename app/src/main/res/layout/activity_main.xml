@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/background_light"
-    tools:context="sszg.com.lesson1.MainActivity">
+    tools:context="sszg.com.lesson1.MainActivitys">
 
     <ImageView
         android:id="@+id/imageView"
@@ -47,6 +47,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:background="@android:color/holo_blue_dark"
+        android:onClick="rollDice"
         android:text="Roll Dice"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
