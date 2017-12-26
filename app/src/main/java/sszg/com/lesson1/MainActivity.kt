@@ -96,6 +96,7 @@ class MainActivity : AppCompatActivity() {
      * Modified because it makes sense to do makeToast since Toast has a makeText
      */
     private fun String.makeToast(length: Int = Toast.LENGTH_SHORT): Toast {
+
         return Toast.makeText(this@MainActivity, this, length)
     }
 
@@ -116,13 +117,15 @@ class MainActivity : AppCompatActivity() {
      * Don't worry though, they're just keywords for optimization. You can read more in the
      * KotlinDocs: http://kotlinlang.org/docs/reference/inline-functions.html
      */
-    private inline fun sendCountdown(millisInFuture: Long, countDownInterval: Long, crossinline onFinish: () -> Unit) {
-        object : CountDownTimer(millisInFuture, countDownInterval) {
-            override fun onFinish() {
-                onFinish()
-            }
+    companion object {
+        inline fun sendCountdown(millisInFuture: Long, countDownInterval: Long, crossinline onFinish: () -> Unit) {
+            object : CountDownTimer(millisInFuture, countDownInterval) {
+                override fun onFinish() {
+                    onFinish()
+                }
 
-            override fun onTick(p0: Long) {}
-        }.start()
+                override fun onTick(p0: Long) {}
+            }.start()
+        }
     }
 }
