@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity() {
          * Having an extension function for toast is useful for future. Not crucial though, I didn't
          * have to do this.
          */
-        "Rolling Dice!".show()
+        "Rolling Dice!".toToast().show()
         /**
          * I have a little nitpick of making a class in a function, especially if you aren't using
          * one of the functions in the class. Idk, I didn't have to do this either really.
@@ -90,9 +90,10 @@ class MainActivity : AppCompatActivity() {
 
     /**
      * Extension function for toast
+     * Modified because .toToast().show() seems more logical than .show()
      */
-    private fun String.show() {
-        Toast.makeText(this@MainActivity, this, Toast.LENGTH_SHORT).show()
+    private fun String.toToast(): Toast {
+        return Toast.makeText(this@MainActivity, this, Toast.LENGTH_SHORT)
     }
 
     /**
