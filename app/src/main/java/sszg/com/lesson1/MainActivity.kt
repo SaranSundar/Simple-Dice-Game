@@ -99,6 +99,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     /**
+     * With extensios, you can make variables out of them too. For example, the above code could be
+     * this:
+     *     private val String.toast: Toast
+     *          get() = Toast.makeText(this@MainActivity, this, Toast.LENGTH_LONG)
+     * Which would allow you to do:
+     *     "Rolling Dice!".toast.show()
+     */
+
+    /**
      * Uses inline functions. The crossinline modifier is just restriction so that we can can't
      * return anything. I forget to add it most of the time really. Essentially, the weird "() -> Unit"
      * is just me declaring it's a lambda.
