@@ -99,7 +99,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     /**
-     * With extensios, you can make variables out of them too. For example, the above code could be
+     * With extensions, you can make variables out of them too. For example, the above code could be
      * this:
      *     private val String.toast: Toast
      *          get() = Toast.makeText(this@MainActivity, this, Toast.LENGTH_LONG)
