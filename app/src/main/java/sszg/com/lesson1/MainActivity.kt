@@ -91,9 +91,11 @@ class MainActivity : AppCompatActivity() {
     /**
      * Extension function for toast
      * Modified because .toToast().show() seems more logical than .show()
+     * Modified because of wanting to perhaps have manipulation of length. Demonstrated default
+     * parameters in Kotlin.
      */
-    private fun String.toToast(): Toast {
-        return Toast.makeText(this@MainActivity, this, Toast.LENGTH_SHORT)
+    private fun String.toToast(length: Int = Toast.LENGTH_SHORT): Toast {
+        return Toast.makeText(this@MainActivity, this, length)
     }
 
     /**
