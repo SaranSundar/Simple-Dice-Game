@@ -1,0 +1,21 @@
+{
+  "name": "first_lesson",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "bulma": "^0.6.1",
+    "react": "^16.2.0",
+    "react-confirm-alert": "^1.0.8",
+    "react-dice": "^1.0.1",
+    "react-dice-complete": "^1.0.2",
+    "react-dom": "^16.2.0",
+    "react-scripts": "1.0.17"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "deploy": "npm run build && mv build/index.html build/200.html && surge build http://annadice.surge.sh/",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
